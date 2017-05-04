@@ -34,6 +34,24 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+
+    th {
+        background-color: #fec503;
+        color: white;
+    }
+    </style>
 
 </head>
 
@@ -190,7 +208,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- 여기서 부터 구현하면 된다.!--><br>
-                    <textarea id="getinfoTxt" readonly="readonly" style="font-size:18px; resize:none;" rows="30px" cols="115px" ></textarea>
+                    <table id="myTable">
+                      <tr>
+                        <th>습득장소</th>
+                        <th>이름</th>
+                        <th>습득날짜</th>
+                        <th>연락처</th>
+                        <th>상태</th>
+                      </tr>
+                    </table>
+                    <!-- <textarea id="getinfoTxt" readonly="readonly" style="font-size:18px; resize:none;" rows="30px" cols="115px" ></textarea> !-->
                 </div>
             </div>
         </div>
