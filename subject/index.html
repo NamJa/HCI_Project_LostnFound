@@ -35,6 +35,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
     <style>
+
     table {
         border-collapse: collapse;
         width: 100%;
@@ -50,6 +51,9 @@
     th {
         background-color: #fec503;
         color: white;
+    }
+    tr:hover{
+    background-color : #FFF176;
     }
     </style>
 
@@ -81,7 +85,7 @@
                         <a class="page-scroll" href="#portfolio">사용자 평가</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">대화형 프로토타입</a>
+                        <a class="page-scroll" href="#about">분실물 찾기</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
@@ -168,7 +172,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">사용자 대상 실험</h2>
+                    <h2 class="section-heading">사용자 대상 실험_2 대화형 프로토타입</h2>
                     <br><br>
                     <h2><li>계획 수립</li></h2> <br>
                     <p style="font-size:23px">1. 가설 설정</p>
@@ -200,6 +204,44 @@
                     </p> <br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/6BuxoGzzNTc" frameborder="0" allowfullscreen></iframe>
 
+                    <br><br><br><br>
+                    <h2 class="section-heading">사용자 대상 실험_3 최종 완성본</h2>
+                    <p style="font-size:17px"> 이번엔 최종 결과물인 만큼, 여러 api를 적용해보려고 하였다. <br>
+                      특히, 검색기능의 api와 이미지 api를 넣을려고 하였지만, 검색 기능을 넣으려 한다면, 기존 코드를 거의 완전히 갈아엎으면서 몇 가지 기능을 포기해야 하는 경우가 생기기에, 적용하지 않았다. <br>
+                      그리고 분실물 이미지 api는 서울시 열린 데이터 광장에 사용하기 쉽게 게재되어 있지만, <br> 실제로 버스, 택시, 지하철 모두가 분실물 담당 업무를 하는 사람이 사진을 찍어서 올리지 않아, api를 적용해도 사진이 출력되지 않는 경우가 90%이기 때문에, 허울뿐인 api는 제외하는것이 더 낫다는 판단이 들어 제외하기로 했다. <br>
+                       <br>
+                      그래서 이 많은 분실물들의 목록을 어떻게 친근하게 다가갈가를 고민하던 차에, 가장 익숙한 불편함을 떠올렸다.<br>
+                      기존 대화형 프로토타입에선 단순히 테이블 목록만 띄워주고 끝을 냈었다.<br> 하지만, 목록이 너무 많기 때문에 가끔씩 피곤하면 약간의 난독증이 찾아오는 나같은 사람에겐 줄을 따라 읽다가 다음 줄로 넘어가는 경우가 생기곤 했다.
+                      그리하여, 가장 간단하게 css문법으로 구현할 수 있지만, <br>
+                      그나마 데이터를 좀 더 쉽게 받아들일 수 있는 테이블의 "hover"기능을 탑재하여 가독성을 높였다. <br>
+                      몇몇 사람들에게 이 프로토타입의 전 후를 비교하며 보여주고, 사용성이 확 달라진 느낌을 받았다는 평가도 받기도 했다. <br><br>
+                      먼저 실험영상을 보도록 하자. <br>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/YyVmXJwHtmM" frameborder="0" allowfullscreen></iframe>
+                      <br><br>
+                      총 5명에게 실험을 진행하였다. 대체로 깔끔하고 간결하다는 평가를 받았다.<br>
+                      <br> 실험은 특정 물건을 잃어버린 가상의 상황에서, 진행되었다. 그리고 저번 실험 결과와 다른 점은, 대화형 프로토타입때의 실험을 마치고 나서, 눈을 돌린 참가자들이 다시 자신이 찾던 물품을 찾아볼 시에, 못찾고 다시 처음부터 스크롤을 하며 읽어 내려가는 현상이 있었지만 <br>
+                      최종 결과물 실험 영상을 찍고 나서 참가자들이 자신이 찾던 물품 테이블위에 hover가 적용된 것을 보고 다시 쉽게 찾는 현상도 발견하였다. <br>
+                      마치 운영체제의 버퍼 캐쉬를 구현한 듯한 느낌이 들기도 했다. <br>
+                      아쉬운 점으로는 우리나라의 공무원들이 제대로 일을 하지 않아 api적용을 하지 못한점이 아쉽다고 평가하기도 했다.
+                      <br> 또한, 이번에는 처음으로 외부 학교의 인문계 학생에게 테스트를 진행해보았다.<br> 그 결과 생각지도 못한 버그가 발생하였다.<br>
+                      그 동안 줄곧, 우리학교의 컴소과를 대상으로만 진행해서 모두가 크롬에 익숙해있었지만, 다른 과는 그렇지 않았다.
+                      <br> 대부분 IE를 쓰기때문에 내 웹페이지가 작동을 잘 하지 못하였다. IE를 전혀고려하지 않은 명백한 내 잘못이었다. <br>
+                      IE용과 크롬용 웹페이지를 따로 만들기도 한다는데 진짜였던 것이다. <br><br>
+
+                      요번 과제를 진행하면서 두고두고 아쉬울 점은 분실물 이미지 API를 적용하지 못한것이 가장 아쉬움이 크다.<br>
+                      간신히 테이블에 표시된 분실물의 이름마다 분실물 ID에 맞게 이미지 Hyperlink를 달아주는 작업을 하였으나, 공무원들의 근무태만으로 실패한 것이 아주 마음에 걸린다. <br>
+                      지금까지는 과제가 잘 되지 않는다면, 1%는 visual studio와 불안정한 우분투 환경, 99%는 내 잘못이었지만,<br>
+                      <br>내 잘못이 아닌 다른 사람에 의해 과제 진행이 되지 않는건 신박한 경험이었으며, 한국의 API관리 실태를 몸으로 느낀 사례가 될 것 같다.
+                      <br>향후 개선 방향으로는 다른 웹 페이지 템플릿을 적용하여, 이렇게 보고서가 포함된 결과물이 아닌, 순수한 분실물 찾기 서비스를 탑재한 웹 페이지를 호스팅하는 것이다.
+                      <br>또한, 분실물 목록 테이블을 한 페이지에 쭉 표시하는 방법이 아닌, 일정 개수 만큼 잘라서 1, 2,3, 4, 5, ... N 페이지 만큼 생성하여 서비스 해야할 것 같다.
+
+                      <br><br><br><br>
+                      웹페이지 제작에 사용된 API
+                      <li style="font-size:17px">서울 열린 데이터 광장 : data.seoul.go.kr </li>
+                      <li style="font-size:17px">W3 SCHOOLS : www.w3schools.com</li>
+                      <li style="font-size:17px">웹 페이지의 기본 틀 : bootstrap</li>
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -210,7 +252,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">대화형 프로토타입</h2>
+                    <h2 class="section-heading">분실물을 찾아보세요!</h2>
                     <select class="paramInput" name="traffic" onchange="article_information()">
                       <option value disabled selected>잃어버리셨다고 생각되는 교통수단을 선택해주세요.</option>
                       <option value="b1">버스</option>
